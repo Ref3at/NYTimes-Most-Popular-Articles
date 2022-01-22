@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/articleListFragment">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.refaat.nytimesmostviewedarticles.ui.articleList.ArticleListFragment"
+        android:label="The most viewed articles"
+        tools:layout="@layout/article_list_fragment" >
+        <action
+            android:id="@+id/action_articleListFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+        <action
+            android:id="@+id/action_articleListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.refaat.nytimesmostviewedarticles.ui.articleDetail.ArticleDetailFragment"
+        android:label="The article detail"
+        tools:layout="@layout/article_detail_fragment" >
+        <argument
+            android:name="theSelectedArticle"
+            app:argType="com.refaat.nytimesmostviewedarticles.network.models.ArticleItem" />
+        <action
+            android:id="@+id/action_articleDetailFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.refaat.nytimesmostviewedarticles.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.refaat.nytimesmostviewedarticles.ui.articleDetail.WebViewFragment"
+        android:label="The full article"
+        tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="theSelectedArticle"
+            app:argType="com.refaat.nytimesmostviewedarticles.network.models.ArticleItem" />
+    </fragment>
+</navigation>

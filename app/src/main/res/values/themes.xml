@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NYTimesMostPopularArticles" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--This line changes the color of text in Toolbar-->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
+        <item name="android:textColorSecondary">@color/white</item>
+
+
+
+<!--        <color name="primaryColor">#424242</color>-->
+<!--        <color name="primaryLightColor">#6d6d6d</color>-->
+<!--        <color name="primaryDarkColor">#1b1b1b</color>-->
+<!--        <color name="primaryTextColor">#ffffff</color>-->
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+</resources>
